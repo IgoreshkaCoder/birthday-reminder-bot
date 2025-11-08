@@ -5,10 +5,14 @@ import sqlite3
 import random
 import os
 
+'''git add .
+git commit -m "Fix: correct filenames and cleanup"
+git push'''
+
 # загружает пременное окружение из .env
 load_dotenv()
 
-tkn = os.getenv('tkn')
+tkn = os.getenv('token')
 bt = Bot(token=tkn)
 dp = Dispatcher(bt)
 
@@ -415,4 +419,8 @@ async def add_text(message: types.Message): # фильтруем ненужны�
         conn.commit()
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
+    try:
+        print("🤖 Бот запускается...")
+        executor.start_polling(dp, skip_updates=True)
+    except Exception as e:
+        print(f"❌ Ошибка запуска: {e}")
