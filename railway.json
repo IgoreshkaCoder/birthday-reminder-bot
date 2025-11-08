@@ -3,6 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "python Main.py"
+    "startCommand": "python app.py"
   }
 }
