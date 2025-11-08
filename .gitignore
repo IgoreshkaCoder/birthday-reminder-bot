@@ -1,0 +1,7 @@
+﻿.env
+nap.db
+__pycache__/
+*.pyc
+*.log
+venv/
+.DS_Store
