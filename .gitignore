@@ -1,7 +1,5 @@
 ﻿.env
-nap.db
+*.db
 __pycache__/
 *.pyc
-*.log
-venv/
-.DS_Store
+app.py
